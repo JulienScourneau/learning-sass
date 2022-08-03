@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;700&display=swap);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: lightgray;
+}
+
+main {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+  height: 26rem;
+  transition: height 0.3s;
+  transition: box-shadow 0.3s;
+}
+
+.top {
+  position: relative;
+  height: 120%;
+  flex-direction: column;
+  transition: height 0.3s;
+  overflow: hidden;
+  background-color: black;
+}
+.top img {
+  transition: opacity 0.3s, transform 0.3s;
+  transform: scale(1);
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+}
+.top time {
+  right: 10px;
+  top: 10px;
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 50%;
+  line-height: 12px;
+  padding-top: 2%;
+  text-align: center;
+  background-color: rgb(255, 94, 0);
+  text-transform: uppercase;
+  color: white;
+}
+.top time .day {
+  font-size: 14px;
+}
+.top time .month {
+  font-size: 10px;
+}
+
+.bottom {
+  width: 100%;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: relative;
+}
+.bottom h1 {
+  margin-top: 5%;
+  margin-bottom: 2%;
+  font-size: 150%;
+  text-transform: uppercase;
+}
+.bottom h2 {
+  font-size: 120%;
+  margin-top: 0;
+  color: rgb(255, 94, 0);
+}
+.bottom .photo_text {
+  position: absolute;
+  left: 0;
+  top: -35px;
+  height: 25px;
+  padding: 0 15px;
+  background-color: rgb(255, 94, 0);
+  color: white;
+  text-align: center;
+}
+
+.description_text {
+  display: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer figure {
+  display: flex;
+  font-size: 50%;
+  white-space: nowrap;
+}
+footer figure p {
+  margin-left: 10%;
+}
+footer img {
+  width: 25%;
+}
+
+main:hover {
+  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.3);
+}
+main:hover .top {
+  transition: height 0.3s;
+  height: 60%;
+}
+main:hover .description_text {
+  display: block;
+}
+main:hover .top img {
+  opacity: 0.6;
+  transform: scale(1.2);
+}

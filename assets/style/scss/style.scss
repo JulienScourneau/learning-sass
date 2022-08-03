@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;700&display=swap);
+
+$open-sans: 'Open Sans', sans-serif;
+$primary_color: rgb(255, 94, 0);
+$duration: 0.3s;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $open-sans;
+  background-color: lightgray;
+}
+
+main {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+  height: 26rem;
+  transition: height $duration;
+  transition: box-shadow $duration;
+}
+
+.top {
+  position: relative;
+  height: 120%;
+  flex-direction: column;
+  transition: height $duration;
+  overflow: hidden;
+  background-color: black;
+
+
+  img {
+    transition: opacity $duration, transform $duration;
+    transform: scale(1);
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  time {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 50%;
+    line-height: 12px;
+    padding-top: 2%;
+    text-align: center;
+    background-color: $primary_color;
+    text-transform: uppercase;
+    color: white;
+
+    .day {
+      font-size: 14px;
+    }
+
+    .month {
+      font-size: 10px;
+    }
+  }
+
+}
+
+.bottom {
+  width: 100%;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: relative;
+
+  h1 {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-size: 150%;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 120%;
+    margin-top: 0;
+    color: $primary_color;
+  }
+
+  .photo_text {
+    position: absolute;
+    left: 0;
+    top: -35px;
+    height: 25px;
+    padding: 0 15px;
+    background-color: $primary_color;
+    color: white;
+    text-align: center;
+  }
+}
+
+.description_text {
+
+  display: none;
+}
+
+footer {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  figure {
+    display: flex;
+    font-size: 50%;
+    white-space: nowrap;
+    p{
+      margin-left: 10%;
+    }
+  }
+
+  img {
+    width: 25%;
+  }
+}
+
+main:hover {
+  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.3);
+
+  .top {
+    transition: height $duration;
+    height: 60%;
+  }
+
+  .description_text {
+    display: block;
+  }
+
+  .top img {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
